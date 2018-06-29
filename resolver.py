@@ -4,8 +4,8 @@ from parsers import get_parser
 if __name__ == '__main__':
     parser = get_parser()
     args = parser.parse_args()
-    function = lambda x: x**2 - 2
-    derivative = lambda x: 2*x
+    function = lambda x: 3143680-2*2**x-51200*x
+    derivative = lambda x: (-2**x)*(0.69314718)-51200
     error_esperado = 0.00001
 
     if args.method == 'biseccion':
@@ -19,5 +19,4 @@ if __name__ == '__main__':
         if method.get_error() <= error_esperado:
             break
 
-    print(f'Se obtuvo el valor {valor} en {i} iteraciones')
-
+    print('Se obtuvo el valor ', valor, ' en ', i, ' iteraciones')
